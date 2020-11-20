@@ -1,4 +1,6 @@
 <h2><%= @cocktail.name %></h2>
+<%= cl_image_tag("inmkggjn1ipxks5jkunm",
+      width: 400, height: 300, crop: :fill) %>
 <ul class="list-group">
   <% @cocktail.doses.each do |dose| %>
     <li class="list-group-item"><%= dose.description %> : <%= dose.ingredient.name %><%= link_to "🗑️",
