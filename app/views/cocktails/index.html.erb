@@ -1,11 +1,11 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static1.villaschweppes.com/articles/3/51/49/3/@/364414-cocktails-classiques-10-recettes-de-co-0x648-1.jpeg);">
+<div class="banner img-fluid" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static1.villaschweppes.com/articles/3/51/49/3/@/364414-cocktails-classiques-10-recettes-de-co-0x648-1.jpeg);">
   <div class="container">
-    <h1><strong>Cocktails</strong></h1>
+    <h1><strong>Cocktails</strong></h1><br>
     <ul>
       <% @cocktails.each do |cocktail| %>
       <li><%= link_to cocktail.name, cocktail_path(cocktail), class: "liens" %>
       <% end %>
-    </ul>
+    </ul><br>
 
     <%= link_to "Create a cocktail", new_cocktail_path, class: "btn btn-ghost" %>
   </div>
