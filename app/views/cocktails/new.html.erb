@@ -1,8 +1,12 @@
-<h1>Create a new cocktail</h1>
+<div class="new-cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://www.comptoir-irlandais.com/img/cms/blog/2019/03-Mars/Cocktail%20Pimms/Cocktail.png);">
+<h2 style="color: white;">Create a new cocktail</h2><br>
 
 <%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name, label: false, placeholder: "Cocktail's name", input_html: { class: "form-control-new" } %>
   <%= f.submit "Submit cocktail", class: "btn btn-success" %>
 <% end %>
-
+<br>
 <%= link_to "Back to list", cocktails_path, class: "btn btn-dark" %>
+</div>
+
+

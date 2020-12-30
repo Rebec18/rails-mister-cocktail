@@ -1,14 +1,17 @@
-<h2><%= @cocktail.name %></h2>
-<ul class="list-group" style="width: 18rem;">
-  <% @cocktail.doses.each do |dose| %>
-    <li class="list-group-item"><%= dose.description %> : <%= dose.ingredient.name %><%= link_to "🗑️",
-            dose_path(dose),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
-  </li></li>
-  <% end %>
-</ul><br>
-
-<%= link_to "Back to list", cocktails_path, class: "btn btn-dark" %>
-<%= link_to "Leave a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-info" %>
+<div class="cocktail-name"><h2><%= @cocktail.name %></h2></div>
+<div class="cocktail-show" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://image.freepik.com/vecteurs-libre/illustration-cocktail-ete-dessin-anime-mis-icone-boisson-fraiche_158626-511.jpg);">
+  <div class="cocktail-content">
+    <ul class="list-group" style="width: 18rem;">
+      <% @cocktail.doses.each do |dose| %>
+        <li class="list-group-item"><%= dose.description %> : <%= dose.ingredient.name %><%= link_to "🗑️",
+                dose_path(dose),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+      </li></li>
+      <% end %>
+    </ul><br>
+    <%= link_to "Back to list", cocktails_path, class: "btn btn-dark" %>
+    <%= link_to "Leave a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-info" %>
+  </div>
+</div>
 
